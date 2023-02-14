@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quiz Application</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="box" id="questionScreen">
+            <div class="title">
+                Quiz Application
+            </div>
+            <div class="header">
+                <div class="scoreBox">Score : <span></span></div>
+                    <div class="timerBox">Time Left : <span></span></div>
+            </div>
+            <div class="questionBox">
+                What does CSS stand for?
+            </div>
+            <div class="optionBox">
+                <span onclick="checkAnswer(this)" data-opt="1"></span>
+                <span onclick="checkAnswer(this)" data-opt="2"></span>
+                <span onclick="checkAnswer(this)" data-opt="3"></span>
+                <span onclick="checkAnswer(this)" data-opt="4"></span>
+            </div>
+
+            <div class="footer">
+                <button onclick="showNext()">
+                    Next
+                </button>
+                <button onclick="showResult(1)">
+                    Show Result
+                </button>
+               
+            </div>
+        </div>
+        <div class="box" id="resultScreen" style="display: none;">
+            <div class="title">
+                Quiz Result
+            </div>
+            <div class="resultBox">
+                <label>Questions :</label>
+                <span id="totalQuestion">10</span>
+                <label>Attempt :</label>
+                <span id="attemptQuestion">0</span>
+                <label>Correct :</label>
+                <span id="correctAnswers">0</span>
+                <label>Wrong :</label>
+                <span id="wrongAnswers">0</span>
+            </div>
+            <div class="buttonBox">
+                <a href="index.html">Start Again</a>
+            </div>
+        </div>
+    </body>
+    <script src="jquery.min.js"></script>
+    <script src="quiz.js"></script>
+    <script src="script.js"></script>
+</html>
